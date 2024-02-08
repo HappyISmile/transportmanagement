@@ -1,0 +1,14 @@
+alter table TRANSPORTMANAGEMENT_PLANIN add column PHONE varchar(20) ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column REGISTRATION_NUMBER varchar(10) ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column DEPARTURE_DATE timestamp ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column ARRIVAL_DATE timestamp ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column STATUS integer ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column NUMBER_TC varchar(20) ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column CONDITION integer ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column GATES varchar(5) ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column FIO varchar(100) ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column GATE_SETTING_DATE timestamp ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column LIFTING_CAPACITY integer ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column REGISTRATION_DATE timestamp ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column DEPARTURE_ALLOWED_DATE timestamp ;
+alter table TRANSPORTMANAGEMENT_PLANIN add column ORDER_NUMBER varchar(50) ;

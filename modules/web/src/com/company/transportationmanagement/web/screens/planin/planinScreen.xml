@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://planinScreen.caption"
+        messagesPack="com.company.transportationmanagement.web.screens.planin">
+    <layout>
+        <tabSheet height="100%">
+            <tab id="plannedTab" caption="msg://planned" spacing="true">
+<!--                <filter applyTo="organizationsGrid" dataLoader="organizationsDl">-->
+<!--                    <properties include=".*"/>-->
+<!--                </filter>-->
+            </tab>
+            <tab id="atTheGateTab" caption="msg://atTheGate" spacing="true">
+<!--                <filter applyTo="organizationsGrid" dataLoader="organizationsDl">-->
+<!--                    <properties include=".*"/>-->
+<!--                </filter>-->
+            </tab>
+        </tabSheet>
+    </layout>
+</window>
