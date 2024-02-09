@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://planinEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.transportationmanagement.web.screens.planin">
+    <data>
+        <instance id="planinDc"
+                  class="com.company.transportationmanagement.entity.Planin">
+            <view>
+                <property name="numberTC"/>
+                <property name="liftingCapacity"/>
+                <property name="fio"/>
+                <property name="phone"/>
+            </view>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="AUTO"
+                width="AUTO"
+                modal="true"
+                forceDialog="true"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="planinDc">
+            <column width="350px">
+                <textField id="numberTCField" property="numberTC" caption="msg://numberTC"/>
+                <textField id="fioField" property="fio" caption="msg://fio"/>
+                <textField id="phoneField" property="phone" caption="msg://phone"/>
+                <lookupField id="liftingCapacityField" property="liftingCapacity" caption="msg://liftingCapacity"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

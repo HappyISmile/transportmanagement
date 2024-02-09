@@ -163,4 +163,12 @@ public class Planin extends StandardEntity {
     public void setDepartureDate(LocalDateTime departureDate) {
         this.departureDate = departureDate;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 }

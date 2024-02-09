@@ -3,5 +3,6 @@
     <persistence-unit name="transportmanagement" transaction-type="RESOURCE_LOCAL">
 
         <class>com.company.transportationmanagement.entity.Planin</class>
+        <class>com.company.transportationmanagement.entity.Client</class>
     </persistence-unit>
 </persistence>

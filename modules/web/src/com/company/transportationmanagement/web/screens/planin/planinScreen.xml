@@ -2,9 +2,37 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://planinScreen.caption"
         messagesPack="com.company.transportationmanagement.web.screens.planin">
+    <data>
+        <collection id="planinDc" class="com.company.transportationmanagement.entity.Planin" view="_local">
+            <loader id="planinDl">
+                <query><![CDATA[select e from transportmanagement_Planin e]]></query>
+<!--                where-->
+<!--                (e.status = com.company.transportationmanagement.PLANNED or-->
+<!--                e.status = com.company.transportationmanagement.REGISTERED-->
+            </loader>
+        </collection>
+    </data>
     <layout>
         <tabSheet height="100%">
-            <tab id="plannedTab" caption="msg://planned" spacing="true">
+            <tab id="plannedTab" caption="msg://planned" spacing="true" expand="planinGrid">
+                <dataGrid id="planinGrid" dataContainer="planinDc" width="100%" settingsEnabled="false">
+                    <actions >
+                        <action id="create" type="create" caption="msg://registration"/>
+                        <action id="edit" type="edit"/>
+                        <action id="view" type="view"/>
+                    </actions>
+                    <columns>
+                        <column property="registrationNumber" id="registrationNumber" caption="msg://registrationNumber"/>
+                        <column property="orderNumber" caption="msg://orderNumber"/>
+                        <column property="arrivalDate" caption="msg://arrivalDate"/>
+                    </columns>
+                    <buttonsPanel id="buttonsPanel" alwaysVisible="true">
+                        <button id="createBtn" action="planinGrid.create"/>
+<!--                        <button id="orderSchoolsTableEditBtn" action="orderSpoTable.edit"/>-->
+<!--                        <button id="orderSchoolsTableViewBtn" action="orderSpoTable.view"/>-->
+                    </buttonsPanel>
+
+                </dataGrid>
 <!--                <filter applyTo="organizationsGrid" dataLoader="organizationsDl">-->
 <!--                    <properties include=".*"/>-->
 <!--                </filter>-->

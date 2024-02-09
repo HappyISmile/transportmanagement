@@ -3,5 +3,7 @@
     <menu id="application-transportmanagement" insertBefore="administration" caption="mainMsg://menu_config.application-transportmanagement">
         <item screen="transportmanagement_PlaninScreen"
               caption="mainMsg://menu_config.transportmanagement_PlaninScreen"/>
+        <item screen="transportmanagement_Client.browse"
+              caption="mainMsg://menu_config.transportmanagement_Client.browse"/>
     </menu>
 </menu-config>
