@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
-        caption="msg://planinScreen.caption"
+        caption="msg://planinBrowse.caption"
         messagesPack="com.company.transportationmanagement.web.screens.planin">
     <data>
-        <collection id="planinDc" class="com.company.transportationmanagement.entity.Planin" view="_local">
+        <collection id="planinDc" class="com.company.transportationmanagement.entity.Planin"
+                    view="planin-view">
             <loader id="planinDl">
-                <query><![CDATA[select e from transportmanagement_Planin e]]></query>
-<!--                where-->
-<!--                (e.status = com.company.transportationmanagement.PLANNED or-->
-<!--                e.status = com.company.transportationmanagement.REGISTERED-->
+                <query><![CDATA[select e from transportmanagement_Planin e where
+                e.status = :planned or e.status = :registered]]></query>
+
             </loader>
         </collection>
     </data>
@@ -22,9 +22,16 @@
                         <action id="view" type="view"/>
                     </actions>
                     <columns>
-                        <column property="registrationNumber" id="registrationNumber" caption="msg://registrationNumber"/>
+                        <column property="registrationNumber" caption="msg://registrationNumber"/>
                         <column property="orderNumber" caption="msg://orderNumber"/>
+                        <column property="provider" caption="msg://provider"/>
                         <column property="arrivalDate" caption="msg://arrivalDate"/>
+                        <column property="numberTC" caption="msg://numberTC"/>
+                        <column property="liftingCapacity" caption="msg://liftingCapacity"/>
+                        <column property="fio" caption="msg://fio"/>
+                        <column property="phone" caption="msg://phone"/>
+                        <column property="status" caption="msg://status"/>
+                        <column property="condition" caption="msg://condition"/>
                     </columns>
                     <buttonsPanel id="buttonsPanel" alwaysVisible="true">
                         <button id="createBtn" action="planinGrid.create"/>

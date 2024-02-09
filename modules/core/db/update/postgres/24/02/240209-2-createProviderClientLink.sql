@@ -1,0 +1,2 @@
+alter table PROVIDER_CLIENT_LINK add constraint FK_PROCLI_ON_PLANIN foreign key (CLIENT_ID) references TRANSPORTMANAGEMENT_PLANIN(ID);
+alter table PROVIDER_CLIENT_LINK add constraint FK_PROCLI_ON_CLIENT foreign key (PROVIDER_ID) references TRANSPORTMANAGEMENT_CLIENT(ID);

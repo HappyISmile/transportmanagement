@@ -5,6 +5,6 @@
         <item screen="transportmanagement_Gate.browse" caption="mainMsg://menu_config.transportmanagement_Gate.browse"/>
     </menu>
     <menu id="application-transportmanagement" insertAfter="directory" caption="mainMsg://menu_config.application-transportmanagement">
-        <item screen="transportmanagement_PlaninScreen" caption="mainMsg://menu_config.transportmanagement_PlaninScreen"/>
+        <item screen="transportmanagement_Planin.browse" caption="mainMsg://menu_config.transportmanagement_PlaninScreen"/>
     </menu>
 </menu-config>

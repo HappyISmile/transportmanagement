@@ -64,3 +64,10 @@ create table TRANSPORTMANAGEMENT_GATE (
     primary key (ID)
 )^
 -- end TRANSPORTMANAGEMENT_GATE
+-- begin PROVIDER_CLIENT_LINK
+create table PROVIDER_CLIENT_LINK (
+    CLIENT_ID uuid,
+    PROVIDER_ID uuid,
+    primary key (CLIENT_ID, PROVIDER_ID)
+)^
+-- end PROVIDER_CLIENT_LINK
