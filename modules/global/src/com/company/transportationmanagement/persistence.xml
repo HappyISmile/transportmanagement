@@ -4,5 +4,6 @@
 
         <class>com.company.transportationmanagement.entity.Planin</class>
         <class>com.company.transportationmanagement.entity.Client</class>
+        <class>com.company.transportationmanagement.entity.Gate</class>
     </persistence-unit>
 </persistence>

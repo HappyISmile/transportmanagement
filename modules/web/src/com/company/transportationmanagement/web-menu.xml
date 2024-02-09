@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
-    <menu id="application-transportmanagement" insertBefore="administration" caption="mainMsg://menu_config.application-transportmanagement">
-        <item screen="transportmanagement_PlaninScreen"
-              caption="mainMsg://menu_config.transportmanagement_PlaninScreen"/>
-        <item screen="transportmanagement_Client.browse"
-              caption="mainMsg://menu_config.transportmanagement_Client.browse"/>
+    <menu id="directory" insertBefore="administration" caption="mainMsg://menu_config.directory">
+        <item screen="transportmanagement_Client.browse" caption="mainMsg://menu_config.transportmanagement_Client.browse"/>
+        <item screen="transportmanagement_Gate.browse" caption="mainMsg://menu_config.transportmanagement_Gate.browse"/>
+    </menu>
+    <menu id="application-transportmanagement" insertAfter="directory" caption="mainMsg://menu_config.application-transportmanagement">
+        <item screen="transportmanagement_PlaninScreen" caption="mainMsg://menu_config.transportmanagement_PlaninScreen"/>
     </menu>
 </menu-config>

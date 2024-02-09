@@ -27,3 +27,40 @@ create table TRANSPORTMANAGEMENT_PLANIN (
     primary key (ID)
 )^
 -- end TRANSPORTMANAGEMENT_PLANIN
+-- begin TRANSPORTMANAGEMENT_CLIENT
+create table TRANSPORTMANAGEMENT_CLIENT (
+    ID uuid,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    CODE_CLIENT integer,
+    NAME varchar(200),
+    ADDRESS varchar(200),
+    PERSON varchar(100),
+    --
+    primary key (ID)
+)^
+-- end TRANSPORTMANAGEMENT_CLIENT
+-- begin TRANSPORTMANAGEMENT_GATE
+create table TRANSPORTMANAGEMENT_GATE (
+    ID uuid,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    NUMBER_GATE varchar(5),
+    TIME_FROM time,
+    TIME_BY time,
+    --
+    primary key (ID)
+)^
+-- end TRANSPORTMANAGEMENT_GATE
