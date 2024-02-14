@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
-        caption="msg://gateBrowse.caption"
+        caption="msg://gateSelectBrowse.caption"
         focusComponent="gatesTable"
         messagesPack="com.company.transportationmanagement.web.screens.gate">
     <data readOnly="true">
@@ -10,7 +10,7 @@
             <view extends="_local"/>
             <loader id="gatesDl">
                 <query>
-                    <![CDATA[select e from transportmanagement_Gate e]]>
+                    <![CDATA[select e from transportmanagement_Gate e where e.timeFrom <= :date and e.timeBy >= :date]]>
                 </query>
             </loader>
         </collection>
@@ -22,33 +22,20 @@
         <filter id="filter"
                 applyTo="gatesTable"
                 dataLoader="gatesDl">
-            <properties include=".*"/>
+            <properties include="numberGate"/>
         </filter>
         <groupTable id="gatesTable"
                     width="100%"
                     dataContainer="gatesDc">
-            <actions>
-                <action id="create" type="create"/>
-                <action id="edit" type="edit"/>
-                <action id="remove" type="remove"/>
-                <action id="excel" type="excel"/>
-            </actions>
             <columns>
                 <column id="numberGate"/>
                 <column id="timeFrom"/>
                 <column id="timeBy"/>
             </columns>
             <rowsCount/>
-            <buttonsPanel id="buttonsPanel"
-                          alwaysVisible="true">
-                <button id="createBtn" action="gatesTable.create"/>
-                <button id="editBtn" action="gatesTable.edit"/>
-                <button id="removeBtn" action="gatesTable.remove"/>
-                <button id="exel" action="gatesTable.excel"/>
-            </buttonsPanel>
         </groupTable>
-        <hbox id="lookupActions" spacing="true" visible="false">
-            <button action="lookupSelectAction"/>
+        <hbox id="lookupActions" spacing="true">
+            <button id="lookupSelectAction" caption="Выбрать" primary="true"/>
             <button action="lookupCancelAction"/>
         </hbox>
     </layout>

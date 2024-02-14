@@ -4,4 +4,8 @@
     <view entity="transportmanagement_Planin" name="planin-view" extends="_local">
         <property name="provider" view="_local"/>
     </view>
+    <view entity="transportmanagement_Planin" name="gate-view" extends="_local"/>
+    <view entity="transportmanagement_Planin" name="planin-view_1" extends="gate-view">
+        <property name="provider" view="_local"/>
+    </view>
 </views>

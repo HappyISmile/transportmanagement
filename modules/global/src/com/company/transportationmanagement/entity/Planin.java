@@ -1,19 +1,19 @@
 package com.company.transportationmanagement.entity;
 
+import com.company.transportationmanagement.enums.Condition;
 import com.company.transportationmanagement.enums.LiftingCapacity;
 import com.company.transportationmanagement.enums.Status;
-import com.company.transportationmanagement.enums.Condition;
-import com.haulmont.cuba.core.entity.FileDescriptor;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.OnDelete;
 import com.haulmont.cuba.core.entity.annotation.OnDeleteInverse;
+import com.haulmont.cuba.core.entity.annotation.PublishEntityChangedEvents;
 import com.haulmont.cuba.core.global.DeletePolicy;
-import org.checkerframework.checker.units.qual.C;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@PublishEntityChangedEvents
 @Table(name = "TRANSPORTMANAGEMENT_PLANIN")
 @Entity(name = "transportmanagement_Planin")
 public class Planin extends StandardEntity {
@@ -25,9 +25,9 @@ public class Planin extends StandardEntity {
     @Column(name="ORDER_NUMBER", length = 50)
     private String orderNumber;
 
-    @JoinTable(name = "PROVIDER_CLIENT_LINK",
-            joinColumns = @JoinColumn(name = "CLIENT_ID"),
-            inverseJoinColumns = @JoinColumn(name = "PROVIDER_ID"))
+    @JoinTable(name = "TRANSPORTMANAGMENT_PROVIDER_CLIENT_LINK",
+            joinColumns = @JoinColumn(name = "PLANIN_ID"),
+            inverseJoinColumns = @JoinColumn(name = "CLIENT_ID"))
     @ManyToMany
     @OnDelete(DeletePolicy.CASCADE)
     @OnDeleteInverse(DeletePolicy.UNLINK)

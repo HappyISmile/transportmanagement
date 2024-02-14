@@ -8,16 +8,28 @@
             <loader id="planinDl">
                 <query><![CDATA[select e from transportmanagement_Planin e where
                 e.status = :planned or e.status = :registered]]></query>
-
+            </loader>
+        </collection>
+        <collection id="gateDc" class="com.company.transportationmanagement.entity.Planin"
+                    view="planin-view_1">
+            <loader id="gateDl">
+                <query><![CDATA[select e from transportmanagement_Planin e where
+                e.status = :onTheForts or e.condition = :gateAssigned]]></query>
             </loader>
         </collection>
     </data>
+    <facets>
+        <timer id="myTimer" delay="30000" autostart="true" repeating="true"/>
+    </facets>
     <layout>
-        <tabSheet height="100%">
-            <tab id="plannedTab" caption="msg://planned" spacing="true" expand="planinGrid">
-                <dataGrid id="planinGrid" dataContainer="planinDc" width="100%" settingsEnabled="false">
+        <tabSheet id="tabScheet" height="100%">
+            <tab id="plannedTab" spacing="true" expand="planinGrid" caption="msg://planned">
+                <filter applyTo="planinGrid" dataLoader="planinDl">
+                    <properties include=".*"/>
+                </filter>
+                <dataGrid id="planinGrid" dataContainer="planinDc" width="100%">
                     <actions >
-                        <action id="create" type="create" caption="msg://registration"/>
+                        <action id="create" type="create"/>
                         <action id="edit" type="edit"/>
                         <action id="view" type="view"/>
                     </actions>
@@ -35,19 +47,49 @@
                     </columns>
                     <buttonsPanel id="buttonsPanel" alwaysVisible="true">
                         <button id="createBtn" action="planinGrid.create"/>
+                        <button id="regBtn" caption="msg://registration"/>
+                        <button id="assignGateBtn" caption="msg://assignGate"/>
 <!--                        <button id="orderSchoolsTableEditBtn" action="orderSpoTable.edit"/>-->
 <!--                        <button id="orderSchoolsTableViewBtn" action="orderSpoTable.view"/>-->
                     </buttonsPanel>
-
                 </dataGrid>
-<!--                <filter applyTo="organizationsGrid" dataLoader="organizationsDl">-->
-<!--                    <properties include=".*"/>-->
-<!--                </filter>-->
             </tab>
-            <tab id="atTheGateTab" caption="msg://atTheGate" spacing="true">
-<!--                <filter applyTo="organizationsGrid" dataLoader="organizationsDl">-->
-<!--                    <properties include=".*"/>-->
-<!--                </filter>-->
+            <tab id="atTheGateTab" expand="gateGrid" caption="msg://atTheGate" spacing="true">
+                <filter applyTo="gateGrid" dataLoader="gateDl">
+                    <properties include=".*"/>
+                </filter>
+                <dataGrid id="gateGrid" dataContainer="gateDc" width="100%">
+                <actions >
+                    <action id="create" type="create"/>
+                    <action id="edit" type="edit"/>
+                    <action id="view" type="view"/>
+                </actions>
+                <columns>
+                    <column id="timeResult" caption="msg://timeResult">
+                        <htmlRenderer nullRepresentation="null"/>
+                    </column>
+                    <column property="gates" caption="msg://gates"/>
+                    <column property="registrationNumber" caption="msg://registrationNumber"/>
+                    <column property="orderNumber" caption="msg://orderNumber"/>
+                    <column id="provider" property="provider" caption="msg://provider">
+                        <htmlRenderer nullRepresentation="null"/>
+                    </column>
+                    <column property="arrivalDate" caption="msg://arrivalDate"/>
+                    <column property="numberTC" caption="msg://numberTC"/>
+                    <column property="liftingCapacity" caption="msg://liftingCapacity"/>
+                    <column property="fio" caption="msg://fio"/>
+                    <column property="phone" caption="Телефон"/>
+                    <column property="status" caption="msg://status"/>
+                    <column property="condition" caption="msg://condition"/>
+                </columns>
+                <buttonsPanel id="gateButtonsPanel" alwaysVisible="true">
+<!--                    <button id="gateCreateBtn" action="planinGrid.create"/>-->
+                    <button id="gateLoadBtn" caption="msg://loadEnd"/>
+<!--                    <button id="assignGateBtn" caption="msg://assignGate"/>-->
+                    <!--                        <button id="orderSchoolsTableEditBtn" action="orderSpoTable.edit"/>-->
+                    <!--                        <button id="orderSchoolsTableViewBtn" action="orderSpoTable.view"/>-->
+                </buttonsPanel>
+                </dataGrid>
             </tab>
         </tabSheet>
     </layout>
