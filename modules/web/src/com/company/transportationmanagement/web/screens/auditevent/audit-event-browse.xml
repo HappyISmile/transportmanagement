@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://auditEventBrowse.caption"
+        focusComponent="auditEventsTable"
+        messagesPack="com.company.transportationmanagement.web.screens.auditevent">
+    <data readOnly="true">
+        <collection id="auditEventsDc"
+                    class="com.company.transportationmanagement.audit.AuditEvent">
+            <view extends="_local"/>
+            <loader id="auditEventsDl">
+                <query>
+                    <![CDATA[select e from transportmanagement_AuditEvent e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="auditEventsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="auditEventsTable"
+                dataLoader="auditEventsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="auditEventsTable"
+                    width="100%"
+                    dataContainer="auditEventsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="registrationNumber"/>
+                <column id="numberTC"/>
+                <column id="status"/>
+                <column id="condition"/>
+                <column id="createDate"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="auditEventsTable.create"/>
+                <button id="editBtn" action="auditEventsTable.edit"/>
+                <button id="removeBtn" action="auditEventsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
