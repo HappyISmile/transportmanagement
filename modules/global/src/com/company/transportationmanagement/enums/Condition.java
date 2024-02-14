@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 public enum Condition implements EnumClass<Integer> {
     AWAITS(5, "awaits"),
     AT_THE_GATE(20, "atTheGate"),
+    GATE_ASSIGNED(20, "gateAssigned"),
     DEPARTURE_ALLOWED(50, "departureAllowed");
 
     private Integer id;
