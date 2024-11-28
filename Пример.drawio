@@ -1,9 +1,69 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15" version="24.9.0">
   <diagram name="Страница — 1" id="wZw0v6t3x1GEAjuIiJGZ">
-    <mxGraphModel>
+    <mxGraphModel dx="1122" dy="671" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-1" value="&lt;span style=&quot;font-family: Helvetica, &amp;quot;VP Default&amp;quot;; font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;order&lt;/span&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="100" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-2" value="&lt;span style=&quot;white-space: normal; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 10px; text-align: center; background-color: rgb(248, 249, 250);&quot;&gt;id&lt;/span&gt;&lt;br style=&quot;white-space: normal; box-sizing: content-box; -webkit-font-smoothing: antialiased; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 10px; text-align: center;&quot;&gt;&lt;span style=&quot;white-space: normal; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 10px; text-align: center; background-color: rgb(248, 249, 250);&quot;&gt;name&lt;/span&gt;&lt;br style=&quot;white-space: normal; box-sizing: content-box; -webkit-font-smoothing: antialiased; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 10px; text-align: center;&quot;&gt;&lt;span style=&quot;white-space: normal; box-sizing: content-box; -webkit-font-smoothing: antialiased; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 10px; text-align: center;&quot;&gt;town&lt;br style=&quot;box-sizing: content-box; -webkit-font-smoothing: antialiased;&quot;&gt;price&lt;br style=&quot;box-sizing: content-box; -webkit-font-smoothing: antialiased;&quot;&gt;customer_id&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal; box-sizing: content-box; -webkit-font-smoothing: antialiased; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 10px; text-align: center;&quot;&gt;towns_id&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="xPtnCQ6gJe8y0sD0nyUU-1">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-4" value="items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="100" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-5" value="id&lt;div&gt;name&lt;/div&gt;&lt;div&gt;count&lt;/div&gt;&lt;div&gt;weight&lt;/div&gt;&lt;div&gt;order_id&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="xPtnCQ6gJe8y0sD0nyUU-4">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-6" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=1;rounded=0;entryX=-0.012;entryY=0.371;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.981;exitY=0.608;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="xPtnCQ6gJe8y0sD0nyUU-2" target="xPtnCQ6gJe8y0sD0nyUU-5">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="630" y="240" as="sourcePoint" />
+            <mxPoint x="730" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-7" value="customers" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="390" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-8" value="&lt;font style=&quot;white-space: normal; box-sizing: content-box; -webkit-font-smoothing: antialiased; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 8px; text-align: center;&quot;&gt;id&lt;br style=&quot;box-sizing: content-box; -webkit-font-smoothing: antialiased;&quot;&gt;firstName&lt;/font&gt;&lt;br style=&quot;white-space: normal; box-sizing: content-box; -webkit-font-smoothing: antialiased; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 8px; text-align: center;&quot;&gt;&lt;font style=&quot;white-space: normal; box-sizing: content-box; -webkit-font-smoothing: antialiased; font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;VP Default&amp;quot;; font-size: 8px; text-align: center;&quot;&gt;secondName&lt;br style=&quot;box-sizing: content-box; -webkit-font-smoothing: antialiased;&quot;&gt;email&lt;/font&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="xPtnCQ6gJe8y0sD0nyUU-7">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-15" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=1;rounded=0;entryX=0.019;entryY=0.613;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.002;exitY=0.327;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="467.28" y="429.32999999999987" as="sourcePoint" />
+            <mxPoint x="469.9999999999999" y="190.00000000000006" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="356.96" y="326.44" />
+              <mxPoint x="480" y="366.44" />
+              <mxPoint x="480" y="366.44" />
+              <mxPoint x="490" y="366.44" />
+              <mxPoint x="416.96000000000004" y="356.44" />
+              <mxPoint x="446.96000000000004" y="309.44" />
+              <mxPoint x="456.96000000000004" y="316.44" />
+              <mxPoint x="456.96000000000004" y="266.44" />
+              <mxPoint x="386.96" y="346.44" />
+              <mxPoint x="396.96" y="346.44" />
+              <mxPoint x="376.96" y="356.44" />
+              <mxPoint x="366.96" y="286.44" />
+              <mxPoint x="336.96000000000004" y="266.44" />
+              <mxPoint x="316.96000000000004" y="276.44" />
+              <mxPoint x="316.96000000000004" y="336.44" />
+              <mxPoint x="326.96000000000004" y="306.44" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-16" value="towns" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="100" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-17" value="&lt;div&gt;id&lt;/div&gt;name" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="xPtnCQ6gJe8y0sD0nyUU-16">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xPtnCQ6gJe8y0sD0nyUU-18" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=none;endFill=0;rounded=0;entryX=-0.025;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xPtnCQ6gJe8y0sD0nyUU-17" target="xPtnCQ6gJe8y0sD0nyUU-2">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="340" y="230" as="sourcePoint" />
+            <mxPoint x="440" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
